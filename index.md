@@ -12,7 +12,10 @@
 		outline: 1px solid #005290;
 	}
 </style>
-
+<script type='text/javascript' src='https://c.la2s-core2.sfdc-lywfpd.salesforceliveagent.com/content/g/js/60.0/deployment.js'></script>
+<script type='text/javascript'>
+liveagent.init('https://d.la2s-core2.sfdc-lywfpd.salesforceliveagent.com/chat', '5720g00000000Oy', '00DU70000003ZkP');
+</script>
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
