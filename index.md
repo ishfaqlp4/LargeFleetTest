@@ -1,17 +1,3 @@
-<html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-		
-	</head>
- <body><style type='text/css'>
-	.embeddedServiceHelpButton .helpButton .uiButton {
-		background-color: #005290;
-		font-family: "Arial", sans-serif;
-	}
-	.embeddedServiceHelpButton .helpButton .uiButton:focus {
-		outline: 1px solid #005290;
-	}
-</style>
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
 		background-color: #005290;
@@ -74,5 +60,3 @@
 		initESW('https://service.force.com');
 	}
 </script>
-</body>
-</html>
