@@ -42,7 +42,7 @@ liveagent.init('https://d.la2s-core2.sfdc-lywfpd.salesforceliveagent.com/chat', 
 
 		embedded_svc.init(
 			'https://wexinc--stagefull.sandbox.my.salesforce.com',
-			'https://wexinc--stagefull.sandbox.my.site.com/CustomerCommunity',
+			//'https://wexinc--stagefull.sandbox.my.site.com/CustomerCommunity',
 			gslbBaseURL,
 			'00DU70000003ZkP',
 			'Large_Fleet',
