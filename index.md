@@ -17,6 +17,17 @@
 liveagent.init('https://d.la2s-core2.sfdc-lywfpd.salesforceliveagent.com/chat', '5720g00000000Oy', '00DU70000003ZkP');
 </script>
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<style type='text/css'>
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #005290;
+		font-family: "Arial", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #005290;
+	}
+</style>
+
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
@@ -42,7 +53,7 @@ liveagent.init('https://d.la2s-core2.sfdc-lywfpd.salesforceliveagent.com/chat', 
 
 		embedded_svc.init(
 			'https://wexinc--stagefull.sandbox.my.salesforce.com',
-			'https://wexinc--stagefull.sandbox.my.site.com/CustomerCommunity',
+			'https://wexinc--stagefull.sandbox.my.salesforce-sites.com/chat',
 			gslbBaseURL,
 			'00DU70000003ZkP',
 			'Large_Fleet',
