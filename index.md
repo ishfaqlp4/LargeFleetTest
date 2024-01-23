@@ -38,7 +38,7 @@
 		  "label":"Email", 
 		  "transcriptFields": ["Email__c"]
 		},{
-		  "label":"Compnay", 
+		  "label":"Company", 
 		  "transcriptFields": ["Company__c"]
 		},{
 		  "label":"Phone", 
