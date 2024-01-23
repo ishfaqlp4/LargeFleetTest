@@ -40,7 +40,7 @@
 		},{
 		  "label":"Compnay", 
 		  "transcriptFields": ["Company__c"]
-		},{								,{
+		},{
 		  "label":"Phone", 
 		  "transcriptFields": ["Phone__c"]
 		}];
