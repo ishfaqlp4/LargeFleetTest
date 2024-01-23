@@ -28,6 +28,8 @@
 		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
 		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+
+		//  Array to include pre-chat fields and map it to the associated LiveChatTranscript custom field.
 		embedded_svc.settings.extraPrechatFormDetails = [{
 		  "label":"First Name",  
 		  "transcriptFields": ["FirstName__c"]
@@ -44,6 +46,7 @@
 		  "label":"Phone", 
 		  "transcriptFields": ["Phone__c"]
 		}];
+		
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
