@@ -28,7 +28,22 @@
 		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
 		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
-
+		embedded_svc.settings.extraPrechatFormDetails = [{
+		  "label":"First Name",  
+		  "transcriptFields": ["FirstName__c"]
+		},{
+		  "label":"Last Name", 
+		  "transcriptFields": ["LastName__c"]
+		},{
+		  "label":"Email", 
+		  "transcriptFields": ["Email__c"]
+		},{
+		  "label":"Compnay", 
+		  "transcriptFields": ["Company__c"]
+		},{								,{
+		  "label":"Phone", 
+		  "transcriptFields": ["Phone__c"]
+		}];
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
