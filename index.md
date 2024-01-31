@@ -51,6 +51,7 @@ var cookieValue='';
 	 	if( cookieSplit[0].trim()==='wex_cc_session'){
 		       	if(cookieSplit[1]){
 		     		 cookieValue = cookieSplit[1].split('|')[0];
+				return; //Exiting loop once value found for wex_cc_session
 		       	}
       
       		}
