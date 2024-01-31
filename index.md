@@ -67,10 +67,10 @@ var cookieValue='';
       
 		//Configure extra pre-chat form details with the extracted cookie value
 		embedded_svc.settings.extraPrechatFormDetails = [{
-  		"label": "Cookie Value",
+  		"label": "Coupon Code",
   		"value": cookieValue,
   		"displayToAgent": true,
-  		"transcriptFields" : ["Cookie_Value__c"]
+  		"transcriptFields" : ["Coupon_Code__c"]
 		}
  ];
 
