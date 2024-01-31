@@ -29,6 +29,51 @@
 		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
 
+		// Wex Coupon Code capture code from Einstein Bot
+//manually setting coupon cookies to the site... do not add this to deployment code!!
+    document.cookie = "wex_cc_session=W7CP|M41728";
+    document.cookie = "wex_cc_persistent=H1F|W7CP|EDH4|M41728";
+
+//Retrieve all cookies
+var allCookies = document.cookie;
+var cookieValue='';
+   //log all cookies
+    console.log(allCookies);
+    
+	//Split cookies and process each one	 
+	allCookies.split(';').forEach(function(cookie) {
+     		var cookieSplit = cookie.split('=');
+		     console.log(cookieSplit);
+		     console.log(cookieSplit[1]);
+		     // cookieValue[cookieSplit[0].trim()] = cookieSplit [1];
+       		//Extract values for specific cookies
+	 	// First the code checks for cookieValue in 'wex_cc_session' and if empty it then checks in 'wex_cc_persistent'.
+	 	if( cookieSplit[0].trim()==='wex_cc_session'){
+		       	if(cookieSplit[1]){
+		     		 cookieValue = cookieSplit[1].split('|')[0];
+		       	}
+      
+      		}
+		if(cookieSplit[0].trim()==='wex_cc_persistent') {
+ 		if(cookieSplit[1]){
+     		 	cookieValue = cookieSplit[1].split('|')[0];
+      		 }
+		}
+ 	  	//log extracted cookie value
+    		console.log(cookieValue);
+	});
+ 	
+   
+      
+		//Configure extra pre-chat form details with the extracted cookie value
+		embedded_svc.settings.extraPrechatFormDetails = [{
+  		"label": "Cookie Value",
+  		"value": cookieValue,
+  		"displayToAgent": true,
+  		"transcriptFields" : ["Cookie_Value__c"]
+		}
+ ];
+
 		//  Array to include pre-chat fields and map it to the associated LiveChatTranscript custom field.
 		embedded_svc.settings.extraPrechatFormDetails = [{
 		  "label":"First Name",  
