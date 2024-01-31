@@ -64,18 +64,13 @@ var cookieValue='';
 	});
  	
    
-      
-		//Configure extra pre-chat form details with the extracted cookie value
+		//  Array to include pre-chat fields and map it to the associated LiveChatTranscript custom field.
 		embedded_svc.settings.extraPrechatFormDetails = [{
   		"label": "Coupon Code",
   		"value": cookieValue,
   		"displayToAgent": true,
   		"transcriptFields" : ["Coupon_Code__c"]
-		}
- ];
-
-		//  Array to include pre-chat fields and map it to the associated LiveChatTranscript custom field.
-		embedded_svc.settings.extraPrechatFormDetails = [{
+		},{
 		  "label":"First Name",  
 		  "transcriptFields": ["FirstName__c"]
 		},{
