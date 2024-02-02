@@ -38,11 +38,13 @@
 //Retrieve all cookies
 var x = document.cookie;
 var cookieValue='';
+var foundInsession =false;
     console.log(x); //log all cookies
     
 	//Split cookies and process each one	 
 	x.split(';').forEach(function(el) {
      		var y = el.split('=');
+		if(foundInsession) return;
 		     console.log(y);
 		     console.log(y[1]);
 		
@@ -52,6 +54,7 @@ var cookieValue='';
 	 	if( y[0].trim()==='wex_cc_session' ){
 		       	if(y[1]){
 		     		 cookieValue = y[1].split('|')[0];
+				foundInsession = true;
 				return;
 	  			
 		       	}
