@@ -38,7 +38,6 @@
 //Retrieve all cookies
 var x = document.cookie;
 var cookieValue='';
-var foundInSession = false; //Variable to track if value is found in wex_cc_session
     console.log(x); //log all cookies
     
 	//Split cookies and process each one	 
@@ -50,10 +49,11 @@ var foundInSession = false; //Variable to track if value is found in wex_cc_sess
 //Extract values for specific cookies
 // First the code checks for cookieValue in 'wex_cc_session' and if empty it then checks in 'wex_cc_persistent'.
    
-	 	if( y[0].trim()==='wex_cc_session' && !foundInSession){
+	 	if( y[0].trim()==='wex_cc_session' ){
 		       	if(y[1]){
 		     		 cookieValue = y[1].split('|')[0];
-	  			 foundInSession = true; //Exiting the loop once value is found in wex_cc_session
+				return;
+	  			
 		       	}
       
       		}
