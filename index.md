@@ -30,10 +30,6 @@
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
 
 // Wex Coupon Code capture code from Einstein Bot
-//Hardcoding coupon cookies to the site... DO NOT ADD THIS TO PROD DEPLOYMENT!!
-		
-    document.cookie = "wex_cc_session=EDH2|W7CP|M41728";
-    document.cookie = "wex_cc_persistent=H1F|W7CP|EDH4|M41728";
 
 //Retrieve all cookies
 var x = document.cookie;
