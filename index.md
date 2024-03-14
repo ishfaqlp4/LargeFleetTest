@@ -75,10 +75,10 @@ var foundInsession =false;
   		"displayToAgent": true,
   		"transcriptFields" : ["Coupon_Code__c"]
 		},{
-		  "label":"First Name",  
+		  "label":"First name",  
 		  "transcriptFields": ["FirstName__c"]
 		},{
-		  "label":"Last Name", 
+		  "label":"Last name", 
 		  "transcriptFields": ["LastName__c"]
 		},{
 		  "label":"Email", 
