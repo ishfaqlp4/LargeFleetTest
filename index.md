@@ -8,13 +8,23 @@
 	}
 </style>
 
+<style type='text/css'>
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #005290;
+		font-family: "Arial", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #005290;
+	}
+</style>
+
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
-		embedded_svc.settings.defaultMinimizedText = 'Chat with Sales'; //(Defaults to Chat with an Expert)
+		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
 		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
 
 		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
@@ -28,16 +38,16 @@
 		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
 		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
-
-// Wex Coupon Code capture code from Einstein Bot
-
+		//Code to facilitate retrieving associated cookies from the user browser and storing it as Coupon Code in LiveChatTranscript		
 //Retrieve all cookies
+
 var x = document.cookie;
 var cookieValue='';
 var foundInsession =false;
     console.log(x); //log all cookies
     
 	//Split cookies and process each one	 
+	
 	x.split(';').forEach(function(el) {
      		var y = el.split('=');
 		if(foundInsession) return;
@@ -66,7 +76,8 @@ var foundInsession =false;
 	});
  	
    
-//  Array to include pre-chat fields and map it to the associated LiveChatTranscript custom field.
+//  Array to include pre-chat fields and map it to the associated LiveChatTranscript fields.
+		
 		embedded_svc.settings.extraPrechatFormDetails = [{
   		"label": "Coupon Code",
   		"value": cookieValue,
@@ -88,7 +99,7 @@ var foundInsession =false;
 		  "label":"Phone", 
 		  "transcriptFields": ["Phone__c"]
 		}];
-		
+
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
@@ -96,14 +107,14 @@ var foundInsession =false;
 			'https://wexinc--stagefull.sandbox.my.salesforce.com',
 			'https://wexinc--stagefull.sandbox.my.salesforce-sites.com/chat',
 			gslbBaseURL,
-			'00DU70000003ZkP',
-			'Large_Fleet',
+			'00DU8000000Tosf',
+			'Large_Fleet_Bot_Team',
 			{
 				baseLiveAgentContentURL: 'https://c.la2s-core2.sfdc-lywfpd.salesforceliveagent.com/content',
-				deploymentId: '5720g00000000Oy',
-				buttonId: '573U70000000Nr3',
+				deploymentId: '572U80000008ofZ',
+				buttonId: '573U80000002GYX',
 				baseLiveAgentURL: 'https://d.la2s-core2.sfdc-lywfpd.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04IU70000000673MAA_18d1421fc85',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04IU8000000RvOnMAK_18e38ef2085',
 				isOfflineSupportEnabled: false
 			}
 		);
