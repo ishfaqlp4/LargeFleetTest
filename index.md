@@ -1,4 +1,14 @@
 <style type='text/css'>
+div.embeddedServiceHelpButton div.helpButton button.uiButton:focus,
+div.modalContainer.embeddedServiceSidebar button.minimizedContainer.embeddedServiceSidebarMinimizedDefaultUI:focus {
+    outline: 3px solid #ffffff!important;
+}
+
+.showDockableContainer header.sidebarHeader button.minimizeButton:focus,
+.showDockableContainer header.sidebarHeader button.minimizeButton:focus {
+outline: 2px auto #ffffff;
+}
+
 	.embeddedServiceHelpButton .helpButton .uiButton {
 		background-color: #008375;
 		font-family: "Arial", sans-serif;
