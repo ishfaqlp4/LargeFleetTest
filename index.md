@@ -1,3 +1,5 @@
+//meta code
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 <style type='text/css'>
 div.embeddedServiceHelpButton div.helpButton button.uiButton:focus,
 div.modalContainer.embeddedServiceSidebar button.minimizedContainer.embeddedServiceSidebarMinimizedDefaultUI:focus {
