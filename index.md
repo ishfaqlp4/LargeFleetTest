@@ -1,7 +1,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
 <style type='text/css'>
-embeddedService-chatHeader.chatHeaderBranding{font-size: 2px !important;}
 div.embeddedServiceHelpButton div.helpButton button.uiButton:focus,
 div.modalContainer.embeddedServiceSidebar button.minimizedContainer.embeddedServiceSidebarMinimizedDefaultUI:focus {
     outline: 3px solid #ffffff!important;
